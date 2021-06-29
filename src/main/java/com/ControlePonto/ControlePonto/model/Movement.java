@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.Embeddable;
 import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -14,6 +15,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
 public class Movement {
 
         @AllArgsConstructor
@@ -31,7 +33,7 @@ public class Movement {
         private LocalDateTime dateExit;
         private BigDecimal timeCourse;
         private Occurrences occurrences;
-        private CaLendar calendar;
+        private Calendario calendar;
 
 
 

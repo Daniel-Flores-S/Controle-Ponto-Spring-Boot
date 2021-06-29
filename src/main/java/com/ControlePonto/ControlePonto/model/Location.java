@@ -2,6 +2,8 @@ package com.ControlePonto.ControlePonto.model;
 
 import lombok.*;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Getter
@@ -10,7 +12,9 @@ import javax.persistence.ManyToOne;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
 public class Location {
+    @Id
     private Long id;
 
     @ManyToOne

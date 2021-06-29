@@ -4,6 +4,8 @@ import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -12,14 +14,13 @@ import javax.persistence.Id;
 @EqualsAndHashCode
 @Builder
 @Entity
-public class Company {
+public class Calendario {
+
     @Id
     private Long id;
-    private String description;
-    private String cnpj;
-    private String address;
-    private String district;
-    private String city;
-    private String state;
-    private String telephone;
+    @ManyToOne
+    private TypeDate tipoData;
+    private String descricao;
+    private LocalDateTime dataEspecial;
+
 }
