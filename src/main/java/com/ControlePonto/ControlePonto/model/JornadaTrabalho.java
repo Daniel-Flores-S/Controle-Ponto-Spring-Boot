@@ -3,6 +3,7 @@ package com.ControlePonto.ControlePonto.model;
 import lombok.*;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 
@@ -13,8 +14,10 @@ import javax.persistence.Id;
 @EqualsAndHashCode
 @Builder
 @Entity
-public class AccessLevel {
+
+public class JornadaTrabalho {
     @Id
-    private Long id;
-    private String description;
+    @GeneratedValue
+    private long id;
+    private String descricao;
 }

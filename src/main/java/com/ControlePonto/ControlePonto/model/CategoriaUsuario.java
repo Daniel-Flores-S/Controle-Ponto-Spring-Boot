@@ -12,10 +12,8 @@ import javax.persistence.Id;
 @EqualsAndHashCode
 @Builder
 @Entity
-public class Occurrences {
+public class CategoriaUsuario {
     @Id
-    private Long id;
-    private String name;
-    private String description;
-
+    private long id;
+    private String desscricao;
 }

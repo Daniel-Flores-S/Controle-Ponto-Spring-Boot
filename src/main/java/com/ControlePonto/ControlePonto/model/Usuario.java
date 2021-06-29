@@ -15,19 +15,19 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode
 @Builder
 @Entity
-public class User {
+public class Usuario {
     @Id
     private Long id;
     @ManyToOne
-    private CategoryUser categoryUser;
-    private String name;
+    private CategoriaUsuario categoriaUsuario;
+    private String nome;
     @ManyToOne
-    private Company company;
+    private Empresa empresa;
     @ManyToOne
-    private AccessLevel accessLevel;
+    private NivelAcesso nivelAcesso;
     @ManyToOne
-    private WorkJourney workJourney;
-    private BigDecimal tolerance;
-    private LocalDateTime initJourney;
-    private LocalDateTime endJourney;
+    private  JornadaTrabalho jornadaTrabalho;
+    private BigDecimal tolerancia;
+    private LocalDateTime inicioJornada;
+    private LocalDateTime finalJornada;
 }

@@ -4,6 +4,8 @@ import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Getter
 @Setter
@@ -12,8 +14,10 @@ import javax.persistence.Id;
 @EqualsAndHashCode
 @Builder
 @Entity
-public class CategoryUser {
+public class Localidade {
     @Id
-    private Long id;
-    private String description;
+    private  long id;
+    @ManyToOne
+    private NivelAcesso nivelAcesso;
+    private String descricao;
 }

@@ -12,8 +12,9 @@ import javax.persistence.Id;
 @EqualsAndHashCode
 @Builder
 @Entity
-public class WorkJourney {
+public class Ocorrencia {
     @Id
-    private Long id;
-    private String description;
+    private long id;
+    private String nome;
+    private String descricao;
 }

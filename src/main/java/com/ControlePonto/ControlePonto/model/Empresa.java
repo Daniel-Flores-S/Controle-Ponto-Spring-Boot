@@ -12,14 +12,15 @@ import javax.persistence.Id;
 @EqualsAndHashCode
 @Builder
 @Entity
-public class Company {
+
+public class Empresa {
     @Id
     private Long id;
-    private String description;
+    private String descricao;
     private String cnpj;
-    private String address;
-    private String district;
-    private String city;
-    private String state;
-    private String telephone;
+    private String endereco;
+    private String bairo;
+    private String cidade;
+    private String estado;
+    private String telefone;
 }

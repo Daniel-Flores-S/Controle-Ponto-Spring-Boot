@@ -15,12 +15,10 @@ import java.time.LocalDateTime;
 @Builder
 @Entity
 public class Calendario {
-
     @Id
     private Long id;
     @ManyToOne
-    private TypeDate tipoData;
+    private TipoData tipoData;
     private String descricao;
     private LocalDateTime dataEspecial;
-
 }
