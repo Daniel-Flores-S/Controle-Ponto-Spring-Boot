@@ -22,10 +22,10 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name", nullable = false)
+    @Column(name = "name")
     private String nome;
 
-    @Column(name = "date_birth", nullable = false)
+    @Column(name = "date_birth")
     private LocalDate dateBirth;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)

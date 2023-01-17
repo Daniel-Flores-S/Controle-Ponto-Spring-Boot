@@ -62,7 +62,21 @@ public class PersonService {
     }
 
     public PersonDTO updatePerson(PersonDTO personDTO) {
-        Person person = personMapper.convertToEntity(personDTO);
+        if (personDTO.getId() == null || personDTO.getId() == 0) {
+            throw new BadRequestException("Id não pode ser nulo");
+        }
+
+        PersonDTO personDTO1 = getById(personDTO.getId());
+
+        if (personDTO1 != null) {
+            if (personDTO.getName() != null) personDTO1.setName(personDTO.getName());
+            if (personDTO.getDateBirth() != null)  personDTO1.setDateBirth(personDTO.getDateBirth());
+            if (personDTO.getAddresses() != null) personDTO1.setAddresses(personDTO.getAddresses());
+        }
+
+        System.out.println(personDTO1);
+
+        Person person = personMapper.convertToEntity(personDTO1);
         if (person.getAddresses() != null && !person.getAddresses().isEmpty()) {
             for (Address address : person.getAddresses()) {
                 if (address.isPrimaryAddress()) {
@@ -73,8 +87,10 @@ public class PersonService {
             Address firstAddress = person.getAddresses().get(0);
             firstAddress.setPrimaryAddress(true);
         }
+
         person = personRepository.save(person);
         return personMapper.convertToDTO(person);
+
     }
 
 
