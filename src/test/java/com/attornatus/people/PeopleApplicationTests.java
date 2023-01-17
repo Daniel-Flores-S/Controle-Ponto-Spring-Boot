@@ -1,10 +1,10 @@
-package com.ControlePonto.ControlePonto;
+package com.attornatus.people;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ControlePontoApplicationTests {
+class PeopleApplicationTests {
 
 	@Test
 	void contextLoads() {

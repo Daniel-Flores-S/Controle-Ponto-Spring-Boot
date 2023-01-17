@@ -1,4 +1,4 @@
-package com.ControlePonto.ControlePonto;
+package com.attornatus.people;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,10 +10,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @EnableCaching
 @EnableAsync
-public class ControlePontoApplication {
+public class PeopleApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ControlePontoApplication.class, args);
+		SpringApplication.run(PeopleApplication.class, args);
 	}
 
 }
